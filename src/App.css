@@ -16,9 +16,14 @@
 
 .widget {
   display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.row {
+  display: inherit;
   flex-direction: row-reverse;
   align-items: center;
-  padding: 1rem 0;
 }
 
 .widget-title {
@@ -88,4 +93,10 @@
 
 .completed-score {
   width: 100%;
+}
+
+.description {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin-top: 1rem;
 }
