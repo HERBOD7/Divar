@@ -17,7 +17,6 @@
 .widget {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0;
 }
 
 .row {
@@ -31,6 +30,7 @@
   color: var(--dark-gray);
   margin-right: 1.5rem;
   line-height: 2;
+  white-space: nowrap;
 }
 
 .separator {
@@ -59,7 +59,7 @@
 }
 
 .score-bar {
-  min-width: 25%;
+  min-width: 70px;
   min-height: 18px;
   background: var(--light-gray);
   border-radius: 30px;
@@ -99,4 +99,28 @@
   color: var(--secondary);
   font-size: 1rem;
   margin-top: 1rem;
+}
+
+.secondary-text {
+  color: var(--secondary)
+}
+
+.dark-text {
+  color: var(--dark-gray);
+}
+
+.flex {
+  display: flex;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
 }

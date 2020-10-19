@@ -11,6 +11,8 @@ const response = {
   }
 };
 
+const dividerRow = <hr className="separator" />;
+
 class ScoreRow extends React.Component {
   constructor(){
     super();
@@ -26,8 +28,11 @@ class ScoreRow extends React.Component {
 
   render () {
       return (
-        <div className="widget" onClick={this.widgetAction}>
-          {this.state.showDescription ? <RowDescription description={response.data.text} title={response.data.title} /> : <Row {...this.props}/> }
+        <div>
+          <div className="widget pt-1 pb-1" onClick={this.widgetAction}>
+            {this.state.showDescription ? <RowDescription description={response.data.text} title={response.data.title} /> : <Row {...this.props}/> }
+          </div>
+          {dividerRow}
         </div>
       );
   };
