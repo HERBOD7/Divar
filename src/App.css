@@ -16,9 +16,14 @@
 
 .widget {
   display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.row {
+  display: inherit;
   flex-direction: row-reverse;
   align-items: center;
-  padding: 1rem 0;
 }
 
 .widget-title {
@@ -39,4 +44,59 @@
   border: 3px solid var(--success-primary);
   border-radius: 40px;
   height: 30px;
+}
+
+.secondary {
+  color: var(--secondary);
+  height: 36px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.score-bar {
+  min-width: 25%;
+  min-height: 18px;
+  background: var(--light-gray);
+  border-radius: 30px;
+  margin-left: 1.5rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.score::before {
+  content: "\003C";
+  color: var(--secondary);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.score-bar > div {
+  display: inherit;
+  border-right: 1px solid #ffffff;
+  height: inherit;
+  width: 20%;
+}
+
+.score-bar > div:last-child {
+  border-right: none;
+}
+
+.filled-score-bar {
+  background-color: var(--success-primary);
+}
+
+.completed-score {
+  width: 100%;
+}
+
+.description {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin-top: 1rem;
 }
