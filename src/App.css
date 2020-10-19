@@ -87,10 +87,6 @@
   border-right: none;
 }
 
-.filled-score-bar {
-  background-color: var(--success-primary);
-}
-
 .completed-score {
   width: 100%;
 }
@@ -123,4 +119,12 @@
 
 .pb-1 {
   padding-bottom: 1rem;
+}
+
+.warning {
+  background: #F2C350;
+}
+
+.success {
+  background: var(--success-primary);
 }

@@ -13,7 +13,7 @@ class Row extends React.Component {
                 <img src={this.props.icon.image_url_light} className={iconColor[this.props.icon.icon_color]} alt={this.props.icon.icon_name} />
                 <p dangerouslySetInnerHTML={{__html: `${this.props.title}`}} className="widget-title"/>
                 <div className="score">
-                    <FilledScore percentageScore={this.props.percentage_score} />
+                    {this.props.percentage_score ? <FilledScore className={this.props.score_color} percentageScore={this.props.percentage_score} /> : null}
                 </div>
             </div>
         );
